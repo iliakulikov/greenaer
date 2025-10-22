@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     color: #000;
@@ -136,6 +140,32 @@ button {
 
 .btn-transparent:hover {
     background: rgba(7, 9, 13, 0.2);
+}
+
+/* Anchor links styled as buttons */
+a.btn-secondary,
+a.btn-transparent,
+a.btn-primary,
+a.btn-white,
+a.btn-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    gap: 8px;
+}
+
+a.btn-secondary {
+    font-weight: 500;
+}
+
+a.btn-transparent {
+    font-weight: 500;
 }
 
 .btn-white {
@@ -446,7 +476,9 @@ button {
     flex-grow: 1;
 }
 
-.bike-content button {
+.bike-content button,
+.bike-content a.btn-primary,
+.bike-content a.btn-white {
     margin-top: auto;
 }
 
