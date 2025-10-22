@@ -1255,6 +1255,7 @@ button {
     .featured-btn {
         width: 100%;
         font-size: 15px;
+        justify-content: center;
     }
     
     /* Stories Section */
