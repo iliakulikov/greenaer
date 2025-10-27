@@ -24,11 +24,8 @@ if (form) {
         // Here you would typically send this data to your server
         console.log('Form submitted:', { name, email });
         
-        // Show success message
-        alert('Thank you! We\'ll contact you within 24 hours to schedule your test ride.');
-        
-        // Reset form
-        this.reset();
+        // Redirect to thank you page
+        window.location.href = 'thankyou.html';
     });
 }
 
