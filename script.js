@@ -24,8 +24,8 @@ if (form) {
         // Here you would typically send this data to your server
         console.log('Form submitted:', { name, email });
         
-        // Redirect to thank you page
-        window.location.href = 'thankyou.html';
+        // Redirect to HubSpot meeting booking page
+        window.location.href = 'https://meetings-eu1.hubspot.com/joe-dobias/greenaer-sandyford-one-on-one-test-ride?uuid=4fdaaa82-b7b9-4194-aa85-2af27ecda1f7';
     });
 }
 
