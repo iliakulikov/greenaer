@@ -57,3 +57,23 @@ if ('IntersectionObserver' in window) {
         imageObserver.observe(img);
     });
 }
+
+// Hide navbar when form section is in view
+const header = document.querySelector('.header');
+const formSection = document.querySelector('#booking-form');
+
+if (header && formSection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                header.style.opacity = '0';
+                header.style.pointerEvents = 'none';
+            } else {
+                header.style.opacity = '1';
+                header.style.pointerEvents = 'auto';
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(formSection);
+}
