@@ -435,10 +435,14 @@
                     Experience the difference with a free test ride!
                 </p>
                 
-                <form class="cta-form">
-                    <input type="text" placeholder="Enter your name" class="form-input" required />
-                    <input type="email" placeholder="Enter your email" class="form-input" required />
-                    <button type="submit" class="btn-primary full-width">Book Your Test Ride</button>
+                <form name="submit-to-google-sheet" class="cta-form">
+                    <input type="text" name="name" placeholder="Enter your name" class="form-input" required />
+                    <input type="email" name="email" placeholder="Enter your email" class="form-input" required />
+                    <input type="hidden" name="gclid" id="gclid">
+                    <button type="submit" class="btn-primary full-width">
+                        <span>Book Your Test Ride</span>
+                        <div class="spinner" id="spinner"></div>
+                    </button>
                 </form>
 
                 <div class="cta-features">
