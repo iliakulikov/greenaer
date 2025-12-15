@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best eBikes Ireland - GreenAer | Save €150 with XMAS150</title>
+    <meta name="description" content="Discover Ireland's best electric bikes. Get €150 off accessories with code XMAS150. Premium eBikes with up to 51% Cycle to Work savings.">
+    <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Hero Carousel Styles */
+        .hero-carousel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .hero-carousel-slide.active {
+            opacity: 1;
+        }
+
+        .hero-carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+        }
+
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicator.active {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.2);
+        }
+
+        /* Promo Banner */
+        .promo-banner {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .promo-code {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin: 0 8px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .promo-banner {
+                font-size: 14px;
+                padding: 15px;
+            }
+            
+            .promo-code {
+                font-size: 18px;
+                padding: 6px 12px;
+                display: block;
+                margin: 10px auto;
+                width: fit-content;
+            }
+
+            .carousel-indicators {
+                bottom: 20px;
+            }
+
+            .carousel-indicator {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-logo">
+                <a href="https://www.greenaer.ie/electric-bikes" target="_blank">
+                    <img src="img/logo.webp" alt="GreenAer" />
+                </a>
+            </div>
+            <a href="#savings-calculator" class="btn-secondary navbar-btn">
+                <span class="btn-text-long">Check Your Cycle to Work Savings</span>
+                <span class="btn-text-short">C2W Savings</span>
+            </a>
+            <a href="#booking-form" class="btn-primary navbar-btn">
+                <span class="btn-text-long">Book Your Test Ride</span>
+                <span class="btn-text-short">Book Your Test Ride</span>
+                <span class="arrow">↓</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero">
+        <div class="hero-image">
+            <div class="hero-carousel">
+                <div class="hero-carousel-slide active">
+                    <img src="img/hero_best_1.webp" alt="Best Electric Bikes Ireland" />
+                </div>
+                <div class="hero-carousel-slide">
+                    <img src="img/hero_best_2.webp" alt="Premium eBikes" />
+                </div>
+                <div class="hero-carousel-slide">
+                    <img src="img/hero_best_3.webp" alt="Top Quality Electric Bikes" />
+                </div>
+                <div class="hero-carousel-slide">
+                    <img src="img/hero_best_4.webp" alt="Best eBikes for Commuting" />
+                </div>
+                <div class="hero-carousel-slide">
+                    <img src="img/hero_best_5.webp" alt="Ireland's Best Electric Bikes" />
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <div class="carousel-indicator active" data-slide="0"></div>
+                <div class="carousel-indicator" data-slide="1"></div>
+                <div class="carousel-indicator" data-slide="2"></div>
+                <div class="carousel-indicator" data-slide="3"></div>
+                <div class="carousel-indicator" data-slide="4"></div>
+            </div>
+            <div class="hero-gradient"></div>
+            <div class="hero-blur"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Ireland's <span class="gradient-text">Best</span> Electric Bikes
+            </h1>
+            <p class="hero-description">
+                Premium eBikes from world-leading brands. Plus €150 towards accessories with code XMAS150 - and save up to 51% with the Cycle to Work scheme.
+            </p>
+            <div class="hero-buttons">
+                <a href="#booking-form" class="btn-primary">Book Your Test Ride</a>
+                <a href="#savings-calculator" class="btn-transparent">Calculate Your Savings</a>
+            </div>
+            <div class="hero-features">
+                <span class="feature-item"><span class="dot green"></span> Free test ride</span>
+                <span class="feature-item"><span class="dot blue"></span> €150 accessory voucher</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Best Section -->
+    <section class="section why-section">
+        <div class="container">
+            <h2 class="section-title">
+                Why Choose the <span class="gradient-text">Best</span>
+            </h2>
+            <p class="section-subtitle">
+                What makes GreenAer's eBikes the best choice for Irish riders?
+            </p>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🇮🇪</div>
+                    <h3 class="card-title">Test Rides</h3>
+                    <p class="card-text">In Dublin, Cork And Mullingar. Free, no commitment.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎁</div>
+                    <h3 class="card-title">€150 Accessories</h3>
+                    <p class="card-text">Use code XMAS150 for €150 towards lights, locks, panniers and more when you buy any eBike.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <h3 class="card-title">Maximum Savings</h3>
+                    <p class="card-text">Save up to €1,500 – €3,000 through Cycle to Work - plus your €150 accessory credit.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3 class="card-title">Expert Service</h3>
+                    <p class="card-text">Free Safety Check after 3 months. Dedicated service workshop exclusively for GreenAer customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cycle to Work Savings Section -->
+    <section id="savings-calculator" class="section save-section">
+        <div class="container">
+            <h2 class="section-title">
+                Maximize Your <span class="gradient-text">Savings</span>
+            </h2>
+            <p class="section-subtitle">
+                The Cycle to Work scheme means you can get your premium eBike tax-free, with up to 51% savings depending on your tax band. Plus €150 towards accessories with code XMAS150.
+            </p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3 class="card-title">How It Works</h3>
+                    <p class="card-text">Your employer purchases the bike, you repay through salary over 12 months - saving income tax, USC and PRSI on every payment.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💶</div>
+                    <h3 class="card-title">Real Savings</h3>
+                    <p class="card-text">On a €3,000 bike, higher rate taxpayers save up to €1,530 (51%).</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">✨</div>
+                    <h3 class="card-title">Plus XMAS150</h3>
+                    <p class="card-text">Stack your Cycle to Work savings with our €150 accessory voucher. Get the best bike AND the best gear.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚴</div>
+                    <h3 class="card-title">Simple Process</h3>
+                    <p class="card-text">We handle all the paperwork and Cycle to Work setup. You just pick your dream eBike and start riding.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#booking-form" class="btn-primary" style="display: inline-block;">Book Your Test Ride Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About GreenAer Section -->
+    <section class="section about-section">
+        <div class="container">
+            <h2 class="section-title">
+                About <span class="gradient-text">GreenAer</span>
+            </h2>
+            <p class="section-subtitle">
+                Ireland's e-Bike Specialists since 2008
+            </p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        From our first store in Blackrock to three hubs across Dublin, Cork and Mullingar, GreenAer has led Ireland's e-bike movement. We partner with An Post, councils and businesses across the country - and we only service the bikes we sell.
+                    </p>
+                    <a href="#booking-form" class="btn-primary">Talk to our team</a>
+                </div>
+                <div class="about-image">
+                    <img src="img/greenaer-team-photo.webp" alt="GreenAer Team" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commuter Stories Section -->
+    <section class="section stories-section">
+        <div class="container">
+            <h2 class="section-title">
+                Trusted by <span class="gradient-text">Thousands</span>
+            </h2>
+            <p class="section-subtitle">Ireland's riders choose the best</p>
+            
+            <div class="featured-logos">
+                <a href="https://www.thetimes.com/uk/healthcare/article/e-bike-firm-greenaer-plugs-in-to-commuter-demand-pxkwj6x76" target="_blank" rel="noopener noreferrer">
+                    <img src="img/featured_the_times.png" alt="The Times" />
+                </a>
+                <a href="https://www.rte.ie/news/ireland/2019/0704/1060080-ebikes/" target="_blank" rel="noopener noreferrer">
+                    <img src="img/featured_rte.png" alt="RTÉ" />
+                </a>
+                <a href="https://www.irishtimes.com/transport/2022/08/10/e-bikes-the-future-of-transport-that-has-already-arrived/" target="_blank" rel="noopener noreferrer">
+                    <img src="img/featured_the_irish_times.png" alt="The Irish Times" />
+                </a>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "I researched every eBike available in Ireland. GreenAer's expertise and the quality of their bikes made the decision easy."
+                    </p>
+                    <p class="testimonial-author">- Michael, Dublin</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Best investment I've made. The Cycle to Work savings plus the service from GreenAer made it absolutely worthwhile."
+                    </p>
+                    <p class="testimonial-author">- Sarah, Cork</p>
+                </div>
+            </div>
+
+            <div class="google-badge">
+                <a href="https://www.google.com/search?newwindow=1&sa=X&sca_esv=1b51b421767d5001&hl=en-IE&gl=ie&tbm=lcl&sxsrf=AE3TifP15YDN-EkRzn-alKn40gxnwY5euA:1761133949580&q=GreenAer+Electric+Bikes-+Sandyford+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2NDE2NTUzNjYyMTA0Njc0MDU33MDI-IpRy70oNTXPMbVIwTUnNbmkKDNZwSkzO7VYVyE4MS-lMi2_KEUhKLUsM7W8eBErCYoBdtup6XQAAAA&rldimm=9435563324013710571&ved=2ahUKEwjYwN2b37eQAxWfQEEAHYtAOVUQ9fQKegQIUBAF&biw=1512&bih=823&dpr=2#lkt=LocalPoiReviews" target="_blank" rel="noopener noreferrer">
+                    <img src="img/google-reviews-badge.png" alt="Google Reviews" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="booking-form" class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">
+                    Find Your Best<br/>
+                    <span class="gradient-text">eBike</span><span class="white-text"> Today</span>
+                </h2>
+                <p class="cta-subtitle">
+                    Book a free test ride
+                </p>
+                
+                <form name="submit-to-google-sheet" class="cta-form">
+                    <input type="text" name="name" placeholder="Enter your name" class="form-input" required />
+                    <input type="email" name="email" placeholder="Enter your email" class="form-input" required />
+                    <input type="text" name="promocode" value="XMAS150" placeholder="Promo code" class="form-input" readonly aria-describedby="promo-hint" />
+                    <div id="promo-hint" class="cta-note">Promo code XMAS150 is pre-filled and applied automatically - that's €150 towards accessories when you purchase an eBike.</div>
+                    <input type="hidden" name="gclid" id="gclid">
+                    <button type="submit" class="btn-primary full-width">
+                        <span>Book Your Test Ride</span>
+                        <div class="spinner" id="spinner"></div>
+                    </button>
+                </form>
+
+                <div class="cta-features">
+                    <span class="cta-feature">✓ Free test ride</span>
+                    <span class="cta-feature">✓ €150 accessory voucher included</span>
+                </div>
+                <p class="cta-note">
+                    We'll contact you within 24 hours to schedule your test ride
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="https://www.greenaer.ie/electric-bikes" target="_blank">
+                        <img src="img/logo.webp" alt="GreenAer" />
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.greenaer.ie/terms-conditions/" target="_blank">Privacy Policy</a>
+                    <a href="https://www.greenaer.ie/terms-conditions/" target="_blank">Terms and Conditions</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 GreenAer Ireland. All rights reserved. Ireland's best electric bikes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Hero Carousel Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-carousel-slide');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        const totalSlides = slides.length;
+        let autoplayInterval;
+
+        function showSlide(index) {
+            // Remove active class from all slides and indicators
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Add active class to current slide and indicator
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            const next = (currentSlide + 1) % totalSlides;
+            showSlide(next);
+        }
+
+        function startAutoplay() {
+            autoplayInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+        }
+
+        function stopAutoplay() {
+            clearInterval(autoplayInterval);
+        }
+
+        // Add click handlers to indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                stopAutoplay();
+                showSlide(index);
+                startAutoplay(); // Restart autoplay after manual interaction
+            });
+        });
+
+        // Start autoplay on page load
+        startAutoplay();
+
+        // Pause autoplay when user hovers over the carousel
+        const heroCarousel = document.querySelector('.hero-carousel');
+        if (heroCarousel) {
+            heroCarousel.addEventListener('mouseenter', stopAutoplay);
+            heroCarousel.addEventListener('mouseleave', startAutoplay);
+        }
+    </script>
+</body>
+</html>
